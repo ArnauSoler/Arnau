@@ -1,0 +1,18 @@
+---
+import type { Translation } from '../i18n';
+
+interface Props {
+	copy: Translation;
+}
+
+const { copy } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+	<p>© {year} Arnau Soler</p>
+	<a href="https://www.linkedin.com/in/arnau-soler-recasens/" target="_blank" rel="noreferrer">
+		{copy.footer.linkedIn}
+		<span aria-hidden="true">↗</span>
+	</a>
+</footer>

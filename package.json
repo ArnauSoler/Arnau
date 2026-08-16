@@ -1,0 +1,50 @@
+{
+	"name": "arnausoler-cat",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "node commands/serve.mjs",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"lint": "eslint . && stylelint \"src/**/*.css\"",
+		"check:astro": "astro check",
+		"check:translations": "node commands/check-translations.mjs",
+		"check:html": "html-validate \"dist/**/*.html\"",
+		"check:fast": "npm run format:check && npm run lint && npm run check:astro && npm run check:translations",
+		"test:e2e": "playwright test",
+		"check": "npm run check:fast && npm run build && npm run check:html && npm run test:e2e",
+		"inspect": "node commands/inspect.mjs",
+		"find": "node commands/find.mjs",
+		"translations": "node commands/translations.mjs",
+		"screenshots": "node commands/screenshots.mjs",
+		"audit": "lhci autorun",
+		"check:w3c": "node commands/check-w3c.mjs"
+	},
+	"dependencies": {
+		"@astrojs/sitemap": "^3.7.3",
+		"astro": "^7.2.2"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.10",
+		"@axe-core/playwright": "^4.13.0",
+		"@eslint/js": "^10.0.1",
+		"@lhci/cli": "^0.15.1",
+		"@playwright/test": "^1.62.1",
+		"eslint": "^10.8.1",
+		"eslint-plugin-astro": "^3.1.0",
+		"globals": "^17.11.0",
+		"html-validate": "^11.6.2",
+		"prettier": "^3.9.6",
+		"prettier-plugin-astro": "^0.14.1",
+		"stylelint": "^17.14.1",
+		"stylelint-config-standard": "^40.0.0",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.67.0"
+	}
+}

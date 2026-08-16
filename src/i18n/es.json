@@ -1,0 +1,266 @@
+{
+	"a11y": {
+		"skipLink": "Ir al contenido",
+		"homeLabel": "Arnau Soler — inicio",
+		"openNavigation": "Abrir navegación",
+		"mainNavigation": "Navegación principal",
+		"mobileNavigation": "Navegación móvil",
+		"languageSelector": "Selector de idioma"
+	},
+	"nav": {
+		"home": "Inicio",
+		"software": "Software",
+		"competitions": "Competiciones de robótica",
+		"competing": "Participaciones",
+		"judging": "Arbitraje"
+	},
+	"footer": {
+		"linkedIn": "LinkedIn"
+	},
+	"common": {
+		"explore": "Explorar",
+		"period": "Periodo",
+		"organisation": "Organización",
+		"role": "Rol / ámbito",
+		"year": "Año",
+		"event": "Evento",
+		"responsibility": "Rol y categoría"
+	},
+	"pages": {
+		"home": {
+			"meta": {
+				"title": "Arnau Soler · Software y Robótica",
+				"description": "Arnau Soler — desarrollador de software y responsable internacional de competiciones de robótica.",
+				"ogTitle": "Arnau Soler · Software y Robótica",
+				"ogDescription": "Desarrollador de software, Tournament Manager de WRO y jefe de árbitros de WRO España."
+			},
+			"eyebrow": "Desarrollo de software · Robótica educativa",
+			"title": "Sistemas fiables. Competición internacional.",
+			"intro": "Soy Arnau Soler, desarrollador de software especializado en sistemas sanitarios e integraciones. Además, ayudo a que las competiciones de robótica sean más claras, justas y fiables.",
+			"tracksLabel": "Dos trayectorias profesionales",
+			"tracks": [
+				{
+					"number": "01",
+					"title": "Desarrollo de software",
+					"text": "Aplicaciones de negocio, sistemas de información de laboratorio, APIs e integraciones donde la fiabilidad y la trazabilidad importan.",
+					"href": "software"
+				},
+				{
+					"number": "02",
+					"title": "Competiciones de robótica educativa",
+					"text": "Arbitraje y gestión de torneos WRO internacionales: desde aplicar las reglas de forma coherente hasta mejorar los procesos de los eventos.",
+					"href": "judging"
+				}
+			],
+			"rolesLabel": "Responsabilidades actuales",
+			"roles": [
+				{
+					"title": "Desarrollador de sistemas de información de laboratorio",
+					"organisation": "Eurofins Diagnósticos Globales · desde 2025"
+				},
+				{
+					"title": "Tournament Manager",
+					"organisation": "WRO Association · desde 2026"
+				},
+				{
+					"title": "Jefe de árbitros",
+					"organisation": "WRO España · desde 2023"
+				}
+			],
+			"interestsLabel": "Proyectos e intereses",
+			"interestsTitle": "Tecnología con una finalidad práctica.",
+			"interests": [
+				"Plataformas web y herramientas internas con Django, Blazor y .NET.",
+				"Integración sanitaria, APIs, HL7 y automatización de procesos.",
+				"Herramientas para organizar, puntuar y gestionar competiciones de robótica.",
+				"Robótica educativa, formación tecnológica y comunidades de competición."
+			],
+			"interestsNote": "Se añadirán proyectos seleccionados cuando puedan describirse sin exponer código, datos o información confidencial.",
+			"collaborationLabel": "Colaboración",
+			"collaborationText": "Estoy abierto a conversar sobre desarrollo de software, integración de sistemas, robótica educativa, operación de competiciones y proyectos tecnológicos con impacto real.",
+			"linkedInLabel": "Conectar en LinkedIn"
+		},
+		"software": {
+			"meta": {
+				"title": "Software · Arnau Soler",
+				"description": "Experiencia en desarrollo de software para sistemas sanitarios, integraciones, aplicaciones web y plataformas de datos.",
+				"ogTitle": "Software · Arnau Soler",
+				"ogDescription": "Software sanitario, integración de sistemas, APIs y aplicaciones web fiables."
+			},
+			"eyebrow": "Práctica profesional",
+			"title": "Software que conecta trabajo complejo.",
+			"intro": "Mi experiencia se centra en aplicaciones de negocio, integraciones entre sistemas y soluciones para el entorno sanitario. Trabajo en contextos donde la robustez, la trazabilidad y el intercambio preciso de datos son esenciales.",
+			"focusLabel": "Enfoque",
+			"focusText": "Me gusta comprender bien el dominio funcional antes de programar. Es especialmente útil cuando el software debe conectar procesos, personas y sistemas existentes sin perder fiabilidad ni facilidad de uso.",
+			"technologyLabel": "Herramientas y tecnologías",
+			"technologies": [
+				{
+					"title": "Aplicaciones",
+					"text": "C# y .NET, incluyendo Blazor y Windows Forms; JavaScript para lógica de integración, servicios e interfaces web; Django y Python para plataformas web y herramientas internas."
+				},
+				{
+					"title": "Integración",
+					"text": "Mirth Connect, mensajería HL7, APIs REST, autenticación, tratamiento de documentos e intercambio automatizado de datos para sistemas de información de laboratorio."
+				},
+				{
+					"title": "Datos y entrega",
+					"text": "SQL Server, MySQL y PostgreSQL; Git, Azure DevOps, Docker y flujos de entrega colaborativos."
+				}
+			],
+			"careerLabel": "Trayectoria profesional",
+			"career": [
+				{
+					"period": "2020–2021",
+					"organisation": "HP Printing and Computing Solutions",
+					"role": "Software Engineer Intern"
+				},
+				{
+					"period": "2021–2022",
+					"organisation": "Technology Delivery Center Barcelona — Servizurich",
+					"role": "Software Engineer Intern"
+				},
+				{
+					"period": "2022–2023",
+					"organisation": "Abbott Medical España, Cardiac Rhythm Management",
+					"role": "IT Engineer"
+				},
+				{
+					"period": "2023–actualidad",
+					"organisation": "Fundació Educabot",
+					"role": "Full-Stack Developer — colaboración voluntaria a tiempo reducido"
+				},
+				{
+					"period": "2023–2024",
+					"organisation": "K-Lagan",
+					"role": "Consultor"
+				},
+				{
+					"period": "2024–actualidad",
+					"organisation": "Eurofins Diagnósticos Globales",
+					"role": "Desarrollo de software para sistemas de información de laboratorio e integración sanitaria"
+				}
+			],
+			"note": "Los proyectos profesionales se describen solo a nivel funcional o técnico, respetando siempre la confidencialidad."
+		},
+		"competing": {
+			"meta": {
+				"title": "Competición · Arnau Soler",
+				"description": "Experiencia de Arnau Soler como participante en WRO, VEX Robotics, First Global Challenge y competiciones de programación.",
+				"ogTitle": "Competición · Arnau Soler",
+				"ogDescription": "Un recorrido por competiciones de robótica desde RoboCaspers hasta finales internacionales."
+			},
+			"eyebrow": "Competición de robótica",
+			"title": "El recorrido como participante.",
+			"intro": "La robótica es el origen de gran parte de mi vocación tecnológica. Como miembro de RoboCaspers, aprendí programación, diseño, trabajo en equipo y resolución de problemas en condiciones reales de competición.",
+			"recordLabel": "Trayectoria competitiva",
+			"competition": [
+				{
+					"title": "World Robot Olympiad",
+					"period": "2014–2018",
+					"text": "Finales internacionales en Sochi (2014), Doha (2015) y Chiang Mai (2018); campeón nacional de Gen II Football (2015) y Football (2018)."
+				},
+				{
+					"title": "VEX Robotics Competition",
+					"period": "2013–2017",
+					"text": "Premio al diseño en la final nacional durante cinco ediciones consecutivas (2013–2017) y premio de programación en 2017."
+				},
+				{
+					"title": "First Global Challenge",
+					"period": "2017–2018",
+					"text": "Medalla de bronce del Ustad Ahmad Lahori Award for Innovation in Engineering en Washington D. C. (2017) y 18.ª posición en la final internacional de Ciudad de México (2018)."
+				}
+			],
+			"codewarsLabel": "Competición de programación",
+			"codewarsText": "En HP Codewars obtuve la 10.ª posición en 2017 programando con Python.",
+			"teachingLabel": "Formación y divulgación",
+			"teachingText": "Antes de asumir roles de arbitraje, acompañé a otros alumnos en sus primeros pasos en tecnología. En Club de Programació Casp (2016–2017) impartí Python y C; en Codelearn Eixample Dret (2017–2020), programación y robótica durante tres años.",
+			"teachingConclusion": "La docencia me ha ayudado a trasladar conceptos técnicos complejos a explicaciones claras y a entender la competición como una herramienta educativa para crear aprendizajes duraderos.",
+			"nextLabel": "De participante a organización",
+			"nextText": "La experiencia competitiva evolucionó después hacia la formación, el arbitraje y la coordinación de torneos.",
+			"nextHref": "judging"
+		},
+		"judging": {
+			"meta": {
+				"title": "Arbitraje · Arnau Soler",
+				"description": "Experiencia de Arnau Soler en arbitraje WRO, liderazgo de jueces y gestión de torneos internacionales.",
+				"ogTitle": "Arbitraje · Arnau Soler",
+				"ogDescription": "Arbitraje y gestión internacional de torneos WRO en tres continentes."
+			},
+			"eyebrow": "Operaciones WRO",
+			"title": "Arbitraje y gestión de torneos.",
+			"intro": "Después de competir, pasé a formar parte de la organización de WRO. Como juez, jefe de jueces de categoría y responsable de torneo, trabajo para aplicar las reglas de forma coherente, apoyar a los equipos de jueces, resolver incidencias con criterio y mejorar los procesos de puntuación y operación.",
+			"responsibilitiesLabel": "Responsabilidades actuales",
+			"responsibilities": [
+				"Tournament Manager, WRO Association (desde 2026): coordinación y desarrollo de procesos para los torneos internacionales de la asociación.",
+				"Jefe de árbitros, WRO España: coordinación del sistema de arbitraje, formación y apoyo a los jueces, y trabajo para asegurar competiciones transparentes y consistentes.",
+				"Mejora de procesos y herramientas de competición: flujos de puntuación, visibilidad de resultados, normalización de valoraciones y apoyo a la toma de decisiones durante los eventos."
+			],
+			"recordLabel": "Trayectoria internacional",
+			"events": [
+				{
+					"year": "2019",
+					"event": "WRO International Final, Hungría",
+					"role": "Judge - Football"
+				},
+				{
+					"year": "2022",
+					"event": "WRO Friendship Invitational, Hungría",
+					"role": "Judge"
+				},
+				{
+					"year": "2022",
+					"event": "WRO International Final, Alemania",
+					"role": "Judge - Future Engineers"
+				},
+				{
+					"year": "2023",
+					"event": "WRO Friendship Invitational, Dinamarca",
+					"role": "Head Judge - RoboMission Elementary"
+				},
+				{
+					"year": "2023",
+					"event": "WRO International Final, Panamá",
+					"role": "Judge - Future Engineers"
+				},
+				{
+					"year": "2024",
+					"event": "WRO Open Championship Europe, Italia",
+					"role": "Head Judge - RoboMission Senior"
+				},
+				{
+					"year": "2024",
+					"event": "WRO International Final, Türkiye",
+					"role": "Judge - Future Engineers"
+				},
+				{
+					"year": "2025",
+					"event": "WRO Open Championship Europe",
+					"role": "Tournament Head Judge"
+				},
+				{
+					"year": "2025",
+					"event": "WRO International Final, Singapur",
+					"role": "Tournament Head Judge"
+				},
+				{
+					"year": "2026",
+					"event": "WRO Open Championship Europe, Croacia",
+					"role": "Tournament Head Judge"
+				},
+				{
+					"year": "2026",
+					"event": "WRO Open Championship APAC, India",
+					"role": "Tournament Head Judge"
+				},
+				{
+					"year": "2026",
+					"event": "WRO International Final, Puerto Rico",
+					"role": "Tournament Head Judge"
+				}
+			],
+			"nextLabel": "El punto de partida",
+			"nextText": "El trabajo en operaciones de torneos parte de la experiencia directa como participante.",
+			"nextHref": "competing"
+		}
+	}
+}

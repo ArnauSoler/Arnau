@@ -1,0 +1,136 @@
+---
+import {
+	localeDetails,
+	locales,
+	pagePath,
+	type Locale,
+	type PageKey,
+	type Translation,
+} from '../i18n';
+
+interface Props {
+	locale: Locale;
+	page: PageKey;
+	copy: Translation;
+}
+
+const { locale, page, copy } = Astro.props;
+const isCompetitionPage = page === 'competing' || page === 'judging';
+---
+
+<header class="site-header">
+	<a class="brand" href={pagePath(locale, 'home')} aria-label={copy.a11y.homeLabel}>
+		<span class="brand-mark" aria-hidden="true">AS</span>
+		<span>Arnau Soler</span>
+	</a>
+
+	<div class="header-actions">
+		<nav class="site-navigation desktop-navigation" aria-label={copy.a11y.mainNavigation}>
+			<a href={pagePath(locale, 'home')} aria-current={page === 'home' ? 'page' : undefined}>
+				{copy.nav.home}
+			</a>
+			<a
+				href={pagePath(locale, 'software')}
+				aria-current={page === 'software' ? 'page' : undefined}
+			>
+				{copy.nav.software}
+			</a>
+			<details
+				class="competition-navigation"
+				data-current={isCompetitionPage ? '' : undefined}
+			>
+				<summary>
+					{copy.nav.competitions}
+					<span aria-hidden="true">⌄</span>
+				</summary>
+				<ul>
+					<li>
+						<a
+							href={pagePath(locale, 'competing')}
+							aria-current={page === 'competing' ? 'page' : undefined}
+						>
+							{copy.nav.competing}
+						</a>
+					</li>
+					<li>
+						<a
+							href={pagePath(locale, 'judging')}
+							aria-current={page === 'judging' ? 'page' : undefined}
+						>
+							{copy.nav.judging}
+						</a>
+					</li>
+				</ul>
+			</details>
+			<a
+				class="nav-linkedin"
+				href="https://www.linkedin.com/in/arnau-soler-recasens/"
+				target="_blank"
+				rel="noreferrer"
+			>
+				LinkedIn <span aria-hidden="true">↗</span>
+			</a>
+		</nav>
+
+		<nav class="language-selector" aria-label={copy.a11y.languageSelector}>
+			{
+				locales.map((candidate) => (
+					<a
+						href={pagePath(candidate, page)}
+						hreflang={candidate}
+						lang={candidate}
+						aria-current={candidate === locale ? 'page' : undefined}
+						title={localeDetails[candidate].nativeName}
+					>
+						{localeDetails[candidate].shortLabel}
+					</a>
+				))
+			}
+		</nav>
+
+		<details class="navigation-menu mobile-navigation">
+			<summary>
+				<span class="sr-only">{copy.a11y.openNavigation}</span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</summary>
+			<nav class="site-navigation" aria-label={copy.a11y.mobileNavigation}>
+				<a
+					href={pagePath(locale, 'home')}
+					aria-current={page === 'home' ? 'page' : undefined}
+				>
+					{copy.nav.home}
+				</a>
+				<a
+					href={pagePath(locale, 'software')}
+					aria-current={page === 'software' ? 'page' : undefined}
+				>
+					{copy.nav.software}
+				</a>
+				<div class="mobile-competition-navigation">
+					<span>{copy.nav.competitions}</span>
+					<a
+						href={pagePath(locale, 'competing')}
+						aria-current={page === 'competing' ? 'page' : undefined}
+					>
+						{copy.nav.competing}
+					</a>
+					<a
+						href={pagePath(locale, 'judging')}
+						aria-current={page === 'judging' ? 'page' : undefined}
+					>
+						{copy.nav.judging}
+					</a>
+				</div>
+				<a
+					class="nav-linkedin"
+					href="https://www.linkedin.com/in/arnau-soler-recasens/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					LinkedIn <span aria-hidden="true">↗</span>
+				</a>
+			</nav>
+		</details>
+	</div>
+</header>

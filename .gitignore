@@ -1,0 +1,28 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+secrets/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Build, dependency, and local-preview output
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+.astro/
+.lighthouseci/
+playwright-report/
+test-results/
+artifacts/

@@ -1,0 +1,310 @@
+---
+import { getTranslation, pagePath, type Locale, type PageKey } from '../i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from './SiteFooter.astro';
+import SiteHeader from './SiteHeader.astro';
+
+interface Props {
+	locale: Locale;
+	page: PageKey;
+}
+
+const { locale, page } = Astro.props;
+const copy = getTranslation(locale);
+const content = copy.pages[page];
+---
+
+<BaseLayout locale={locale} page={page} meta={content.meta}>
+	<a class="skip-link" href="#main">{copy.a11y.skipLink}</a>
+	<SiteHeader locale={locale} page={page} copy={copy} />
+
+	<main id="main">
+		{
+			page === 'home' && (
+				<>
+					<section class="masthead masthead-home" aria-labelledby="page-title">
+						<p class="eyebrow">{copy.pages.home.eyebrow}</p>
+						<h1 id="page-title">{copy.pages.home.title}</h1>
+						<p class="masthead-intro">{copy.pages.home.intro}</p>
+					</section>
+
+					<section class="section section-tracks" aria-labelledby="tracks-title">
+						<div class="section-intro">
+							<p class="section-label">{copy.pages.home.tracksLabel}</p>
+							<h2 id="tracks-title">{copy.pages.home.tracksLabel}</h2>
+						</div>
+						<div class="track-list">
+							{copy.pages.home.tracks.map((track) => (
+								<a
+									class="track-item"
+									href={pagePath(locale, track.href as PageKey)}
+								>
+									<span class="record-marker">{track.number}</span>
+									<div>
+										<h3>{track.title}</h3>
+										<p>{track.text}</p>
+									</div>
+									<span class="arrow" aria-hidden="true">
+										→
+									</span>
+								</a>
+							))}
+						</div>
+					</section>
+
+					<section class="section section-dark" aria-labelledby="roles-title">
+						<div class="section-intro">
+							<p class="section-label">{copy.pages.home.rolesLabel}</p>
+							<h2 id="roles-title">{copy.pages.home.rolesLabel}</h2>
+						</div>
+						<div class="role-list">
+							{copy.pages.home.roles.map((role) => (
+								<div>
+									<strong>{role.title}</strong>
+									<span>{role.organisation}</span>
+								</div>
+							))}
+						</div>
+					</section>
+
+					<section class="section section-grid" aria-labelledby="interests-title">
+						<div>
+							<p class="section-label">{copy.pages.home.interestsLabel}</p>
+							<h2 id="interests-title">{copy.pages.home.interestsTitle}</h2>
+						</div>
+						<div>
+							<ul class="plain-list">
+								{copy.pages.home.interests.map((interest) => (
+									<li>{interest}</li>
+								))}
+							</ul>
+							<p class="note">{copy.pages.home.interestsNote}</p>
+						</div>
+					</section>
+
+					<section class="section section-callout" aria-labelledby="collaboration-title">
+						<p class="section-label">{copy.pages.home.collaborationLabel}</p>
+						<h2 id="collaboration-title">{copy.pages.home.collaborationText}</h2>
+						<a
+							class="text-action"
+							href="https://www.linkedin.com/in/arnau-soler-recasens/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{copy.pages.home.linkedInLabel} <span aria-hidden="true">↗</span>
+						</a>
+					</section>
+				</>
+			)
+		}
+
+		{
+			page === 'software' && (
+				<>
+					<section class="masthead" aria-labelledby="page-title">
+						<p class="eyebrow">{copy.pages.software.eyebrow}</p>
+						<h1 id="page-title">{copy.pages.software.title}</h1>
+						<p class="masthead-intro">{copy.pages.software.intro}</p>
+					</section>
+
+					<section class="section section-grid" aria-labelledby="approach-title">
+						<p class="section-label">{copy.pages.software.focusLabel}</p>
+						<div>
+							<h2 id="approach-title">{copy.pages.software.focusText}</h2>
+						</div>
+					</section>
+
+					<section class="section section-dark" aria-labelledby="technology-title">
+						<div class="section-intro">
+							<p class="section-label">{copy.pages.software.technologyLabel}</p>
+							<h2 id="technology-title">{copy.pages.software.technologyLabel}</h2>
+						</div>
+						<div class="technology-list">
+							{copy.pages.software.technologies.map((technology, index) => (
+								<article>
+									<span class="record-marker">
+										{String(index + 1).padStart(2, '0')}
+									</span>
+									<h3>{technology.title}</h3>
+									<p>{technology.text}</p>
+								</article>
+							))}
+						</div>
+					</section>
+
+					<section class="section" aria-labelledby="career-title">
+						<div class="section-intro">
+							<p class="section-label">{copy.pages.software.careerLabel}</p>
+							<h2 id="career-title">{copy.pages.software.careerLabel}</h2>
+						</div>
+						<div class="table-wrap">
+							<table>
+								<thead>
+									<tr>
+										<>
+											<th scope="col">{copy.common.period}</th>
+											<th scope="col">{copy.common.organisation}</th>
+											<th scope="col">{copy.common.role}</th>
+										</>
+									</tr>
+								</thead>
+								<tbody>
+									{copy.pages.software.career.map((item) => (
+										<tr>
+											<td>{item.period}</td>
+											<td>{item.organisation}</td>
+											<td>{item.role}</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+						<p class="note">{copy.pages.software.note}</p>
+					</section>
+				</>
+			)
+		}
+
+		{
+			page === 'competing' && (
+				<>
+					<section class="masthead" aria-labelledby="page-title">
+						<p class="eyebrow">{copy.pages.competing.eyebrow}</p>
+						<h1 id="page-title">{copy.pages.competing.title}</h1>
+						<p class="masthead-intro">{copy.pages.competing.intro}</p>
+					</section>
+
+					<section class="section" aria-labelledby="record-title">
+						<div class="section-intro">
+							<>
+								<p class="section-label">{copy.pages.competing.recordLabel}</p>
+								<h2 id="record-title">{copy.pages.competing.recordLabel}</h2>
+							</>
+						</div>
+						<div class="achievement-list">
+							{copy.pages.competing.competition.map((competition) => (
+								<article>
+									<p class="record-marker">{competition.period}</p>
+									<div>
+										<h3>{competition.title}</h3>
+										<p>{competition.text}</p>
+									</div>
+								</article>
+							))}
+						</div>
+					</section>
+
+					<section
+						class="section section-dark section-grid"
+						aria-labelledby="codewars-title"
+					>
+						<p class="section-label">{copy.pages.competing.codewarsLabel}</p>
+						<div>
+							<h2 id="codewars-title">{copy.pages.competing.codewarsText}</h2>
+						</div>
+					</section>
+
+					<section class="section section-grid" aria-labelledby="teaching-title">
+						<p class="section-label">{copy.pages.competing.teachingLabel}</p>
+						<div>
+							<>
+								<h2 id="teaching-title">{copy.pages.competing.teachingText}</h2>
+								<p class="body-copy">{copy.pages.competing.teachingConclusion}</p>
+							</>
+						</div>
+					</section>
+
+					<section class="section section-callout" aria-labelledby="next-title">
+						<p class="section-label">{copy.pages.competing.nextLabel}</p>
+						<h2 id="next-title">{copy.pages.competing.nextText}</h2>
+						<a
+							class="text-action"
+							href={pagePath(locale, copy.pages.competing.nextHref as PageKey)}
+						>
+							{copy.common.explore} <span aria-hidden="true">→</span>
+						</a>
+					</section>
+				</>
+			)
+		}
+
+		{
+			page === 'judging' && (
+				<>
+					<section class="masthead" aria-labelledby="page-title">
+						<p class="eyebrow">{copy.pages.judging.eyebrow}</p>
+						<h1 id="page-title">{copy.pages.judging.title}</h1>
+						<p class="masthead-intro">{copy.pages.judging.intro}</p>
+					</section>
+
+					<section class="section section-dark" aria-labelledby="responsibilities-title">
+						<div class="section-intro">
+							<>
+								<p class="section-label">
+									{copy.pages.judging.responsibilitiesLabel}
+								</p>
+								<h2 id="responsibilities-title">
+									{copy.pages.judging.responsibilitiesLabel}
+								</h2>
+							</>
+						</div>
+						<ol class="responsibility-list">
+							{copy.pages.judging.responsibilities.map((responsibility, index) => (
+								<li>
+									<span class="record-marker">
+										{String(index + 1).padStart(2, '0')}
+									</span>
+									<p>{responsibility}</p>
+								</li>
+							))}
+						</ol>
+					</section>
+
+					<section class="section" aria-labelledby="events-title">
+						<div class="section-intro">
+							<>
+								<p class="section-label">{copy.pages.judging.recordLabel}</p>
+								<h2 id="events-title">{copy.pages.judging.recordLabel}</h2>
+							</>
+						</div>
+						<div class="table-wrap">
+							<table>
+								<thead>
+									<tr>
+										<>
+											<th scope="col">{copy.common.year}</th>
+											<th scope="col">{copy.common.event}</th>
+											<th scope="col">{copy.common.responsibility}</th>
+										</>
+									</tr>
+								</thead>
+								<tbody>
+									{copy.pages.judging.events.map((item) => (
+										<tr>
+											<td>{item.year}</td>
+											<td>{item.event}</td>
+											<td>{item.role}</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+					</section>
+
+					<section class="section section-callout" aria-labelledby="next-title">
+						<p class="section-label">{copy.pages.judging.nextLabel}</p>
+						<h2 id="next-title">{copy.pages.judging.nextText}</h2>
+						<a
+							class="text-action"
+							href={pagePath(locale, copy.pages.judging.nextHref as PageKey)}
+						>
+							{copy.common.explore} <span aria-hidden="true">→</span>
+						</a>
+					</section>
+				</>
+			)
+		}
+	</main>
+
+	<SiteFooter copy={copy} />
+</BaseLayout>

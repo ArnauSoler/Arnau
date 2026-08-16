@@ -1,0 +1,20 @@
+---
+import type { GetStaticPaths } from 'astro';
+import PortfolioPage from '../../components/PortfolioPage.astro';
+import { isLocale, localizedLocales, type Locale } from '../../i18n';
+
+export const getStaticPaths = (() =>
+	localizedLocales.map((locale) => ({
+		params: { locale },
+		props: { locale },
+	}))) satisfies GetStaticPaths;
+
+const routeLocale = Astro.params.locale;
+if (!isLocale(routeLocale)) {
+	throw new Error(`Unsupported localized route: ${routeLocale ?? '(missing)'}`);
+}
+
+const locale = Astro.props.locale as Locale;
+---
+
+<PortfolioPage locale={locale} page="home" />
